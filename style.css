@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffebee; /* Rosa bem clarinho */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63;
+    margin: 0 auto 50px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    animation: pulse 1.2s infinite; /* Efeito de batimento */
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes pulse {
+    0% { transform: rotate(-45deg) scale(1); }
+    15% { transform: rotate(-45deg) scale(1.2); }
+    30% { transform: rotate(-45deg) scale(1); }
+    45% { transform: rotate(-45deg) scale(1.15); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+
+.message {
+    color: #ad1457;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.sub-message {
+    color: #c2185b;
+    font-style: italic;
+}
