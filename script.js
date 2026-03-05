@@ -17,5 +17,5 @@ heart.addEventListener('click', () => {
     document.head.appendChild(style);
 
     // Pequena mensagem de alerta
-    alert("Cada batida desse coração é por você! ✨");
+    alert("EU TI AMOO DIMAISS MINHA PRINCESINHA LINDAA");
 });
